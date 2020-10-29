@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navbar</title>
+    <!--Stylesheet is linked to common Css from \common_css_js\styles.css  and has included css file in navbar\style.css-->
+    <link rel="stylesheet" href="\common_css_js\styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <!--Navbar Start-->
+    <nav>
+      <div class="logo"><a href="www.collcom.org"><img src="\images\companylogo.png" alt="Collcom Logo" style="height: 80px;width: 260px;margin-top: 1rem;"></a> </div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+
+        <form id="form" role="search">
+            <input type="search" id="query" name="q"
+             placeholder="Search..."
+             aria-label="Search through site content" style="width: 60%;">
+            <button><strong>Search</strong></button>
+          </form>
+          <br>
+          <br><br>
+          
+
+
+
+
+
+        <li><a href="#"><strong>Home</strong></a></li>
+        <li>
+          <label for="btn-1" class="show"><strong>About Us +</strong></label>
+          <a href="#"><strong>About Us</strong></a>
+          <input type="checkbox" id="btn-1">
+          <ul>
+            <li><a href="#">Knowing Collcom</a></li>
+            <li><a href="#">Governing Body</a></li>
+            <li><a href="#">Core Team</a></li>
+            <li><a href="#">Our Projects</a></li>
+            <li><a href="#">Annual Reports</a></li>
+            <li><a href="#">Impact Created</a></li>
+          </ul>
+        </li>
+
+
+        <li>
+          <label for="btn-2" class="show"><strong>Events +</strong></label>
+          <a href="#"><strong>Events</strong></a>
+          <input type="checkbox" id="btn-2">
+          <ul>
+            <li><a href="#">Verify Certificate</a></li>
+            <li><a href="#">Past Events Gallery</a></li>
+          
+            <li>
+              <label for="btn-3" class="show">Ongoing Events +</label>
+              <a href="#">Ongoing Events <span class="fa fa-plus"></span></a>
+              <input type="checkbox" id="btn-3">
+              <ul>
+                <li><a href="#">Event-1</a></li>
+                <li><a href="#">Event-2</a></li>
+                <li><a href="#">Event-3</a></li>
+                <li><a href="#">Event-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+        <li>
+            <label for="btn-4" class="show"><strong>Get Involved</strong></label>
+            <a href="#"><strong>Get Involved</strong></a>
+            <input type="checkbox" id="btn-4">
+            <ul>
+              <li><a href="#">Volunteer with Us</a></li>
+              <li><a href="#">Internship</a></li>
+              <li><a href="#">Patnership</a></li>
+            </ul>
+          </li>
+
+
+        <li><a href="#"><strong>Blogs</strong></a></li>
+        <li><a href="#"><strong>Donate</strong></a></li>
+        <li><a href="#"><strong>Contact</strong></a></li>
+        <li><a href="#" style="text-decoration: underline;"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+      
+        <br>
+        
+      </ul>
+    </nav>
+   
+
+    
+    <!--Navbar End-->
+
+    <!--Page Content-->
+
+    <!--Page Content End-->
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+  </body>
+</html>
+
+
+<!--Color Codes
+
+    1)#364f6b - Blue
+    2)#3fc1c9 - moderate cyan
+    3)#f5f5f5 - Very Light grey mostly white
+    4)#fc5185 - Soft Pink
+
+
+
+-->
