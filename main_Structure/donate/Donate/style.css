@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+
+/*---------------------------------------------
+#Navbar
+----------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  background: #364f6b;
+    position: static;
+}
+nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+nav .logo {
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+  z-index: 1001;
+}
+nav ul li {
+  display: inline-block;
+  background: #364f6b;
+  margin: 0 5px;
+}
+nav ul li:hover {
+  transform: scale(1.1);
+}
+nav ul li a {
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover {
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+}
+nav ul ul li a:hover {
+  box-shadow: none;
+}
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul ul ul {
+  border-top: none;
+}
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 200px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul ul li a {
+  line-height: 50px;
+}
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,
+.icon,
+#btn,#btn-1,#btn-2,#btn-3,#btn-4 {
+  display: none;
+}
+.fa-plus {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+#form {
+  background-color: #3fc1c9;
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: right;
+  margin-right: 1.5rem;
+  margin-top: 0.9rem;
+}
+
+#query{
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  color: white;
+}
+button:hover {
+  color: #fc5185;
+}
+
+ @media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: cyan;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul {
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  nav ul ul ul a {
+    padding-left: 80px;
+  }
+  nav ul ul ul li {
+    position: static;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+  nav ul ul li {
+    border-bottom: 0px;
+  }
+  span.cancel:before {
+    content: "\f00d";
+  }
+}
+.content {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#form {
+  margin-left: 1rem;
+}
+
+
+/*--------------------------------------------------------------
+# Navbar Ends
+--------------------------------------------------------------*/
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  background-size: cover;
+  margin-bottom: 0rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+/*--------------------------------------------------------------
+# Events
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Get Involved
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Donte US
+--------------------------------------------------------------*/
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing{
+  background: url("images/sky.jpg") no-repeat center;
+  background-size: cover;
+}
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+*/}
+.marketing .col-lg-4 a {
+background-color:#BE29C0;
+}
+.marketing h2 {
+  font-weight: 400;
+  color: blue;
+  font-size: 25px;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+  font-size: 18px;
+  color:#000000;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette {
+    background: url("images/cream.jpg") no-repeat center;
+    background-size: cover;
+}
+.featurette-divider {
+  margin: 0rem; /* Space out the Bootstrap <hr> more */
+}
+.featurette a{
+  margin:1rem;
+  font-size: 35px;
+  background-color:#BE29C0;
+}
+.featurette h2{
+  padding-left: 40px;
+}
+.featurette img{
+  padding-top: 50px;
+  padding-left: 50px;
+  border-radius: 260px;
+}
+
+/* Thin out the marketing headings */
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Payment Details
+--------------------------------------------------------------*/
+.donation-form-wrap {
+    padding: 96px 64px;
+    margin-bottom: 96px;
+    background: #edf3f5;
+}
+.form-signin  {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer-widgets {
+    position: relative;
+      margin-top: 20px;
+    padding: 90px 0 90px;
+    font-weight: 600;
+    color: #929191;
+    background: url("images/foot-bg.jpg") no-repeat center;
+    background-size: cover;
+    z-index: 99;
+}
+
+.footer-widgets::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 101%;
+    background: rgba(22,22,22,.75);
+}
+
+.footer-widgets h2 {
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: #FFA500;
+    text-decoration-line: underline;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+.footer-widgets ul {
+    padding: 20px 0 15px;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-widgets ul li {
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.footer-widgets ul li a {
+    color: 	#C0C0C0;
+
+}
+
+.footer-widgets ul li a:hover {
+    color: #800080;
+}
+.footer-widgets h1{
+  font-family: cursive;
+}
+
+.foot-about p {
+    font-size: 15px;
+    line-height: 2;
+    color: #929191;
+}
+.foot-contact p {
+    font-size: 18px;
+    line-height: 2;
+    color:#ffc87c;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.foot-about ul li {
+    margin-right: 28px;
+}
+
+.foot-about ul li a {
+    color: #fff;
+}
+.foot-contact ul li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+.foot-contact ul li  .fa-facebook {  
+  background: #3B5998;  
+  color: white;
+}
+
+.foot-contact ul li .fa {
+    width: 28px;
+    margin-right: 10px;
+    font-size: 18px;
+    text-align: center;
+    color:#ff69b4 ;
+}
+
+
+.foot-contact ul li span {
+    width: calc(100% - 3px);
+}
+
+/*
+# Subscribe
+--------------------------------*/
+.subscribe-form {
+    margin-top: 45px;
+}
+
+.subscribe-form input[type="email"] {
+    width: calc(100% - 70px);
+    padding: 12px 16px;
+    border: 0;
+    font-size: 12px;
+    line-height: 1;
+    background: #fff;
+    color: #131212;
+    outline: none;
+}
+
+.subscribe-form input[type="email"]::placeholder {
+    color: #9b9a9a;
+    font-style: italic;
+}
+
+.subscribe-form input[type="submit"] {
+    width: 68px;
+    padding: 13px 0 14px;
+    border: 0;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    background: #0000FF;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.footer-bar {
+    padding: 30px 0;
+    font-size: 15px;
+    color:#98ff98;
+    background: #131212;
+    text-align: center;
+}
+@media  (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .footer-widgets{
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .subscribe-form {
+  }
+}
+
+@media (min-width: 62em) {
+  .footer-bar {
+
+  }
+}
+
+/*---------------------------------------
+#Footer Ends
+---------------------------------------*/
