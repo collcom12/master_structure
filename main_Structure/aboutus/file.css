@@ -1,0 +1,590 @@
+body {
+    font-family: sans-serif,Verdana ;
+    background: #262626;
+    justify-content:center;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  h1{
+    color: white;
+  }
+/* ------------------------------------------------------------------ */
+  /* --------------------------------------------------------------------------------- */
+  .char{
+    position: relative;
+    width: 1400px;
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .char .card {
+    position: relative;
+    width: 250px;
+    background: linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: .5s;
+  }
+
+  .char .card:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:-50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.03);
+    pointer-events: none;
+    z-index: 1;
+
+  }
+
+  .percent
+  {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow:  inset 0 0 50px #000;
+    background: #222;
+    z-index: 1000;
+  }
+
+  .percent .number
+  {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+  }
+
+  .percent .number h2
+  {
+    color: #777;
+    font-weight: 700;
+    font-size: 40px;
+    transition: .5s;
+  }
+
+  .percent .number h2 span{
+    font-size: 24px;
+    color: #777;
+  }
+
+  .card:hover .percent .number h2 span{
+    color: #fff;
+  } 
+
+  .card:hover .text
+  {
+    color: #fff;
+  }
+  
+  .text{
+    position: relative;
+    color: #777;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .5s;
+    margin-top: 20px;
+  }
+
+
+
+
+  .card:hover .percent .number h2
+  {
+    color:#fff;
+    font-style: 60px;
+  }
+
+  
+
+  .char .card:hover
+  {
+    transform:translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+  }
+
+  svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round ;
+    transform:translate(5px,5px) ;
+  }
+
+  svg circle:nth-child(2)
+  {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+  }
+
+  .card:nth-child(1) svg circle:nth-child(2)
+  {
+    stroke-dashoffset: calc(440 - (440 * 83) / 100);
+    stroke:#00ff43;
+  }
+  .card:nth-child(2) svg circle:nth-child(2)
+  {
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+    stroke:#00a1ff;
+  }
+
+  .card:nth-child(3) svg circle:nth-child(2)
+  {
+    stroke-dashoffset: calc(440 - (440 * 75) / 100);
+    stroke:#ff04f7;
+  }
+
+  .card:nth-child(4) svg circle:nth-child(2)
+  {
+    stroke-dashoffset: calc(440 - (440 * 65) / 100);
+    stroke:#ecd27b;
+  }
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+
+
+
+
+
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .container{
+    width: 100%;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .box {
+    width: 300px;
+    position: relative;
+    height: 300px;
+    background: rgb(10, 10, 10);
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+.container .box .imgBox
+  {
+    position: relative;
+    overflow: hidden;
+  }
+
+.container .box .imgBox img
+  {
+    object-fit: cover; 
+    width: 300px; 
+    height: 300px; 
+    transition: transform 2s;
+  }
+
+.container .box:hover .imgBox img
+  {
+    transform: perspective(300px) rotateY(180deg)
+  }
+
+.container .box .details
+  {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right:10px;
+    background: rgba(0, 0, 0, 0.8);
+    transform: scaleY(0);
+    transition: transform .5s;
+  }
+
+.container .box:hover .details
+  {
+    transform: scaleY(1);
+  }
+
+.container .box .details .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align:center;
+    padding: 15px;
+    color:#fff;
+  }
+
+.container .box .details .content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color:#fff ;
+  }
+
+.container .box .details .content p{
+      margin: 10px 0 0;
+      padding: 0;
+  }
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+.c1
+{
+  position: relative;
+  width:1200px;
+  height: 300px;
+  margin:100px auto;
+  background: #000;
+}
+.c1 .b1
+{
+  position: relative;
+  width:calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: rgb(99, 92, 92);
+  float: left;
+  margin:15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius:10px;
+}
+.c1 .b1 .icon
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(228, 7, 7);
+  transition: .5s;
+  z-index: 1;
+}
+
+.c1 .b1:hover .icon{
+  top:20px;
+  left:calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.c1 .b1 .icon .fa
+{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size: 80px;
+  transition: .5s;
+  color:white;
+}
+.c1 .b1:hover .icon .fa
+{
+  font-size:40px;
+}
+
+.c1 .b1 .cont
+{
+  position: absolute;
+  top:100px;
+  height:calc(100% - 100px);
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  transition: .5s;
+  opacity: 0;
+
+}
+.c1 .b1:hover .cont{
+  top: 100px;
+  opacity: 1;
+}
+
+.c1 .b1 .cont h3{
+  margin:0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.c1 .b1 .cont p{
+  margin:0;
+  padding: 0;
+  color: rgb(228, 212, 187);
+}
+
+.c1 .b1:nth-child(1) 
+{
+  background: #4caf50;
+}
+.c1 .b1:nth-child(1) .icon
+{
+  background: #4caf50;
+}
+.c1 .b1:nth-child(2) .icon
+{
+  background: #d03852;
+}
+.c1 .b1:nth-child(2) 
+{
+  background:#f54967;
+}
+.c1 .b1:nth-child(3) .icon
+{
+  background: #23798e;
+}
+.c1 .b1:nth-child(3)
+{
+  background:#328fa5;
+}
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+.testimonials
+{
+  margin: 20px auto 100px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+  grid-gap:20px;
+
+}
+.testimonials .c2{
+  position: relative;
+  width:350px;
+  margin:0 auto;
+  background: #333;
+  padding:20px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.testimonials .c2 .layer
+{
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#03a9f4, #e91ee3);
+  z-index: 1;
+  transition: .5s;
+}
+
+.testimonials .c2:hover .layer
+{
+  top:0;
+}
+.testimonials .c2 .c3{
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials .c2 .c3 p
+{
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.testimonials .c2 .c3 .im
+{
+  /* make width and height 100px */
+  width: 180px;
+  height: 180px; 
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px sold #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+.testimonials .c2 .c3 .details h2{
+  font-size:  18px;
+  color: #fff;
+}
+.testimonials .c2 .c3 .details h2 span{
+  color:#03a9f4;
+  font-size: 14px;
+  transition: .4s ;
+}
+
+.testimonials .c2:hover .c3 .details h2 span
+{
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
