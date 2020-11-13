@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/fb00e9b9b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="donate.css">
+    <title>Donate</title>
+</head>
+<body>
+<!--Note: Only Compactable with 75% zoom scale on 14' screen-->
+     <!--NAVBAR  START-->
+
+     <nav>
+        <div class="logo"><a href="www.collcom.org"><img src="images/companylogo.png" alt="Collcom Logo" style="height: 80px;width: 240px;margin-top: 1rem;" ></a> </div>
+        <label for="btn" class="icon">
+          <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+  
+          <form id="form" role="search">
+              <input type="search" id="query" name="q"
+               placeholder="Search..."
+               aria-label="Search through site content" style="width: 60%;">
+              <button><strong>Search</strong></button>
+            </form>
+            <br>
+            <br><br>
+          <li><a href="#"><strong>Home</strong></a></li>
+          <li>
+            <label for="btn-1" class="show"><strong>About Us +</strong></label>
+            <a href="#"><strong>About Us</strong></a>
+            <input type="checkbox" id="btn-1">
+            <ul>
+              <li><a href="#">Knowing Collcom</a></li>
+              <li><a href="#">Governing Body</a></li>
+              <li><a href="#">Core Team</a></li>
+              <li><a href="#">Our Projects</a></li>
+              <li><a href="#">Annual Reports</a></li>
+              <li><a href="#">Impact Created</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <label for="btn-2" class="show"><strong>Events +</strong></label>
+            <a href="#"><strong>Events</strong></a>
+            <input type="checkbox" id="btn-2">
+            <ul>
+              <li><a href="#">Verify Certificate</a></li>
+              <li><a href="#">Past Events Gallery</a></li>
+            
+              <li>
+                <label for="btn-3" class="show">Ongoing Events +</label>
+                <a href="#">Ongoing Events <span class="fa fa-plus"></span></a>
+                <input type="checkbox" id="btn-3">
+                <ul>
+                  <li><a href="#">Event-1</a></li>
+                  <li><a href="#">Event-2</a></li>
+                  <li><a href="#">Event-3</a></li>
+                  <li><a href="#">Event-4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+              <label for="btn-4" class="show"><strong>Get Involved</strong></label>
+              <a href="#"><strong>Get Involved</strong></a>
+              <input type="checkbox" id="btn-4">
+              <ul>
+                <li><a href="#">Volunteer with Us</a></li>
+                <li><a href="#">Internship</a></li>
+                <li><a href="#">Patnership</a></li>
+              </ul>
+            </li>
+          <li><a href="#"><strong>Blogs</strong></a></li>
+          <li><a href="#"><strong>Donate</strong></a></li>
+          <li><a href="#"><strong>Contact</strong></a></li>
+          <li><a href="#" style="text-decoration: underline;"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        
+          <br>
+          
+        </ul>
+      </nav>
+    <!--NAVBAR  END-->
+
+    <!--DONATE PAGE-->
+    <div class="mainvol">
+        <!--JUMBOTRON SUBHEADER-->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container" style="margin-left: 5rem;">
+          <h1 class="display-4" style="color: #3fc1c9;font-weight: bold;">DONATE</h1>
+          <p class="lead" style="color: lightcyan;">Having the power to improve the lives of others is, to many people, a privilege, and one that comes with its own sense of obligation.  </p>
+        </div>
+      </div>
+
+    <!--JUMBOTRON SUBHEADER END-->
+        <div class="wrapper">
+            <div class="title">
+              DONATE NOW !
+            </div>
+            <div class="form">
+               <div class="inputfield">
+                  <label>First Name</label>
+                  <input type="text" class="input">
+               </div>  
+                <div class="inputfield">
+                  <label>Last Name</label>
+                  <input type="text" class="input">
+               </div>  
+                <div class="inputfield">
+                  <label>Gender</label>
+                  <div class="custom_select" style="margin-left: -0.8rem;">
+                    <select>
+                      <option value="">Select</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+               </div> 
+                <div class="inputfield">
+                  <label>Email Address</label>
+                  <input type="text" class="input">
+                  
+               </div> 
+              <div class="inputfield">
+                  <label>Phone Number</label>
+                  <input type="text" class="input">
+               </div> 
+              <div class="inputfield">
+                  <label>Donation Amount (INR)</label>
+                  <input type="number" class="input">
+               </div> 
+              <div class="inputfield terms">
+                  <label class="check">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <p>Agreed to terms and conditions</p>
+               </div> 
+              <div class="inputfield">
+                <input type="submit" value="DONATE" style="color: black;" class="btn">
+              </div>
+            </div>
+        </div>
+     
+        <div class="card mb-3 don" style="max-width: 900px; float: right;margin-right: 6rem;margin-top: -0rem;background-color: #3fc1c9;opacity: 96%;">
+            <div class="row no-gutters">
+             
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h1 class="card-title" style="color: #364f6b; text-align: center;"><strong>DONATE</strong></h1>
+                  <p class="card-text" style="color: #193b63; padding-left: 2rem;padding-right: 1rem;font-size: 19px;">"Spread the Love and Smile to the needy one. Your little contributions can bring positive changes in someone lifes. Even your small amount donation matters to us because only needy people can understand the value of what they need.The knowledge that you’re helping others is hugely empowering and, in turn, can make you feel happier and more fulfilled. Research has identified a link between making a donation to charity and increased activity in the area of the brain that registers pleasure - proving that as the old adage goes, it really is far better to give than to receive."</p>
+                  <div class="progress" style="margin-left:1rem ;margin-top: 2rem;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" style="width: 17%;color: black;"><strong>17% Raised</strong> </div>
+                   
+                  </div>
+                  <span class="badge badge-pill badge-warning"style="margin-top:2rem;margin-left:1rem;"><strong>Raised: 16,880 INR</strong></span>
+                  <span class="badge badge-pill badge-warning" style="float: right;margin-top:2rem;margin-right: 1rem;"><strong>Goal:1,30,000 INR </strong></span>
+                </div>
+              
+              </div>
+              <div class="col-md-4">
+                <img src="images/DONATE2.jpg" class="card-img" alt="...">
+              </div>
+            </div>
+          </div>
+   
+  </div>
+
+
+<div class="container-fluid whywhole">
+<h1 style="margin-left:3rem;color: #3fc1c9;padding-top: 2rem;padding-bottom: 2rem;"><strong>Some of our works</strong></h1>
+
+    <div class="row whyus">
+      
+        <div class="flip-card col-lg-3 col-md-6 col-sm-12">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/swach.jpeg" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h4 style="color: white;padding-left:0.2rem"><strong>Swacch Bharat Camp</strong></h4>
+                <p1  style="color: #364f6b;">10 days Summer Camp was organised similar to Government's Swacch Bharat Abhiyan.</p1><br>
+                <p2 style="color: lightgrey;">29th June - 8th July, 2019</p2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card col-lg-3 col-md-6 col-sm-12">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/induction.jpg" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h4 style="color: white;"><strong>NSS E-Convention</strong></h4>
+                <p1  style="color: #364f6b;">All India NSS meet was conducted which signifies leader of today and tomorrow</p1><br><br>
+                <p2 style="color: lightgrey;">September 25, 2020, 4PM</p2>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card col-lg-3 col-md-6 col-sm-12">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/fraud.png" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h4 style="color: white;"><strong>NSS E-Convention</strong></h4>
+                <p1  style="color: #364f6b;">All India NSS meet was conducted which signifies leader of today and tomorrow</p1><br><br>
+                <p2 style="color: lightgrey;">September 25, 2020, 4PM</p2>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+
+</div>
+
+<div class="impact">
+    <h1 style="color:#193b63;margin-left: 3rem;padding-top: 3rem;padding-bottom: 1rem;"><strong>Our Impacts</strong></h1>
+    <p1 style="padding-left: 3rem;color: #364f6b;font-size: 20px;"><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quisquam natus in optio dolor similique sit dolores cum. Nobis dolores,</strong> </p1><br>
+    <p1 style="padding-left: 3rem;color: #364f6b;font-size: 20px;"><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quisquam natus in optio dolor similique sit dolores cum. Nobis dolores, </strong></p1><br>
+    <p1 style="padding-left: 3rem;color: #364f6b;font-size: 20px;bottom: 1rem;"><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quisquam natus in optio dolor similique sit dolores cum. Nobis dolores, </strong></p1>
+       
+
+    <div class="container">
+        <!-- Close the image -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      
+        <!-- Expanded image -->
+        <img id="expandedImg" style="width:100%">
+      
+        <!-- Image text -->
+        <div id="imgtext"></div>
+      </div>
+   
+    <div class="row">
+        <div class="column col-md-3">
+          <img class="firstimg" src="images/imp1.jpeg" alt="Nature" onclick="myFunction(this);" style="height:250px;width:400px;opacity: 100%;">
+        </div>
+        <div class="column col-md-3">
+          <img src="images/imp2.jpg" alt="Snow" onclick="myFunction(this);"  style="height:250px;width:400px;">
+        </div>
+        <div class="column col-md-3">
+          <img src="images/imp3.jpeg" alt="Mountains" onclick="myFunction(this);"  style="height:250px;width:400px;">
+        </div>
+        <div class="column col-md-3">
+          <img src="images/imp4.jpeg" alt="Lights" onclick="myFunction(this);" style="height:250px;width:400px;">
+        </div>
+      </div>   
+    
+</div>
+
+
+<div class="chat">
+    <h1 style="color: #364f6b;padding-left: 3rem;padding-bottom:1rem;padding-top: 2rem;"><strong>Why Us?</strong></h1>
+    <p1 style="padding-left: 3rem;color: #364f6b;font-size: 20px;"><strong> ipsum dolor sit amet consectetur, adipisicing elit. Rem quisquam natus in optio dolor similique sit dolores cum. Nobis dolores,</strong> </p1><br>
+    <p1 style="padding-left: 3rem;color: #364f6b;font-size: 20px;"><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quisquam natus in optio dolor similique sit dolores cum. Nobis dolores, </strong></p1>
+       
+
+    <div class="card-group">
+        <div class="card">
+          <img src="images/mission.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title"><strong>Mission</strong></h2>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><div class="progress" style="  box-shadow: 0 15px 35px rgba(0, 0, 0, 4);" >
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 67%;  box-shadow: 0 15px 35px rgba(0, 0, 0, 4);color: black;"><strong>67% Achieved</strong></div>
+              </div></small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/vision.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title"><strong>Vision</strong></h2>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><div class="progress"  style="  box-shadow: 0 15px 35px rgba(0, 0, 0, 4);">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"  role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 85%; box-shadow: 0 15px 35px rgba(0, 0, 0, 4);color: black;"><strong>85% Achieved</strong></div>
+              </div></small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/strat1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title"><strong>Excellent Team</strong></h2>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><div class="progress" style="  box-shadow: 0 15px 35px rgba(0, 0, 0, 4);">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%; box-shadow: 0 15px 35px rgba(0, 0, 0, 4);color: black;"><strong>70% Achieved</strong></div>
+              </div></small>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+    <!-- FOOTER wala part -->
+      
+    <footer class="footer-distributed">
+        
+        <div class="footer-left">
+  
+          <h3><strong>Coll</strong><span><strong>Com</strong></span></h3>
+  
+          <p class="footer-links">
+            <a href="index.html" class="link-1">Home</a>
+            
+            <a href="aboutme.html">About Me</a>
+          
+            <a href="project.html">Projects</a>
+          
+            <a href="resume.html">Resume</a>
+            
+            <a href="contactus.html">Contact Me</a>
+          </p>
+  
+          <p1 class="footer-company-name" style="color: gray;">Copyright ©2020 <strong>CollCom,</strong> New Delhi. All rights reserved</p1>
+        </div>
+  
+        <div class="footer-center">
+  
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Ranchi</span> Banglore [INDIA] </p>
+          </div>
+  
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+91 9523177XXX</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:utkarsh.aditya.121212@gmail.com">adiutkarsh12@gmail.com</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+          <p class="footer-company-about">
+            <span>Was Your Experience good?</span>
+            Hope you had a great experience while surfing my page. All kinds of suggestions and complains are welcome.<strong>Thank You</strong>
+          </p>
+  
+          <div class="footer-icons">
+  
+            <a href="https://www.facebook.com/utkarsh.aditya.121"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/UtkarshAditya2"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/utkarsh-aditya-46a176182/?originalSubdomain=in"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/utkarsh12adi"><i class="fa fa-github"></i></a>
+            <a href="https://www.instagram.com/adi.12.utkarsh/"><i class="fa fa-instagram"></i></a>
+  
+          </div>
+  
+        </div>
+  
+      </footer>
+
+
+
+
+
+
+
+
+
+
+        
+    </body>
+   
+
+
+   
+<!--donate page end-->
+
+
+<script>
+
+
+
+
+function myFunction(imgs) {
+
+  var expandImg = document.getElementById("expandedImg");
+
+  var imgText = document.getElementById("imgtext");
+
+  expandImg.src = imgs.src;
+ 
+  imgText.innerHTML = imgs.alt;
+  
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  
+</body>
+</html>
