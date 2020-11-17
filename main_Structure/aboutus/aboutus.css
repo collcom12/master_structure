@@ -1,0 +1,386 @@
+/*NAVBAR CSS*/
+nav {
+  background: #364f6b;
+}
+nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+nav .logo {
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+  background: #364f6b;
+  margin: 0 5px;
+}
+nav ul li:hover {
+  transform: scale(1.1);
+}
+nav ul li a {
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover {
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+  text-decoration: none;
+}
+nav ul ul li a:hover {
+  box-shadow: none;
+  text-decoration: none;
+}
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul ul ul {
+  border-top: none;
+}
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 200px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul ul li a {
+  line-height: 50px;
+}
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,
+.icon,
+input {
+  display: none;
+}
+.fa-plus {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+form {
+  background-color: #3fc1c9;
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: right;
+  margin-right: 1.5rem;
+  margin-top: 0.9rem;
+}
+
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  color: white;
+}
+button:hover {
+  color: #fc5185;
+}
+
+@media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: cyan;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul {
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  nav ul ul ul a {
+    padding-left: 80px;
+  }
+  nav ul ul ul li {
+    position: static;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+  nav ul ul li {
+    border-bottom: 0px;
+  }
+  span.cancel:before {
+    content: "\f00d";
+  }
+}
+.content1 {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header {
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+form {
+  margin-left: 1rem;
+}
+
+/*NAVBAR CSS END*/
+
+.footer {
+  background-color: #364f6b;
+}
+
+#overhover:hover {
+  background-color: #fc5185;
+  transition-duration: 2s;
+  border-radius: 45px;
+}
+
+/**Knowing Collcom**/
+
+.knowing {
+  background-color: #fc5185;
+  overflow: hidden;
+  background-image: url(/images/kn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**comunity services **/
+.comservices {
+  background-color: #fc5185;
+  overflow-y: hidden;
+  box-shadow: 20px 8px 26px 6px black;
+}
+.comservicessub {
+  background-color: cyan;
+  transform: skewY(40deg);
+  box-shadow: 20px 8px 26px 6px black;
+}
+#straight {
+  transform: skewY(-40deg);
+}
+
+/**mission**/
+
+.mission {
+  background-color: #364f6b;
+  overflow-y: hidden;
+  box-shadow: 20px 8px 26px 6px black;
+}
+.missionsub {
+  background-color: cyan;
+  transform: skewY(5deg);
+  box-shadow: 20px 8px 26px 6px black;
+}
+#straight2 {
+  transform: skewY(-5deg);
+}
+
+/**Team members**/
+.direct {
+  background-color: #fc5185;
+  box-shadow: 20px 8px 26px 6px black;
+}
+
+/**ADVISIORY**/
+
+.advisiory {
+  background-color: cyan;
+  overflow: hidden;
+  box-shadow: 20px 8px 26px 6px black;
+}
+.advisiorysub {
+  background-color: #364f6b;
+  transform: skewY(-10deg);
+  box-shadow: 20px 8px 26px -6px black;
+}
+#section3 {
+  transform: skewY(10deg);
+}
+
+/**core**/
+
+.core {
+  background-color: #fc5185;
+  overflow: hidden;
+  box-shadow: 20px 8px 26px 6px black;
+}
+.coresub {
+  background-color: #364f6b;
+  transform: skewY(-5deg);
+  box-shadow: 20px 8px 26px -6px black;
+}
+
+#section4 {
+  transform: skewY(5deg);
+}
+
+/**cybercrime**/
+.cybercrime {
+  background-image: url("/images/bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 20px 8px 26px 6px black;
+}
+#inner {
+  box-shadow: 20px 8px 26px 6px black;
+}
+#inner:hover {
+  background-color: #364f6b;
+}
+
+#inner h2 {
+  color: cyan;
+}
+#inner p1 {
+  color: #fc5185;
+}
+.cybercell {
+  background-image: url("/images/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**CYBERCELL**/
+
+#inner2 {
+  box-shadow: 20px 8px 26px 6px black;
+}
+#inner2 h2 {
+  color: cyan;
+}
+#inner2 p1 {
+  color: #fc5185;
+}
+#inner2:hover {
+  background-color: #364f6b;
+}
+
+/**PROJECTS**/
+
+.proj {
+  background-color: #fc5185;
+  overflow: hidden;
+  box-shadow: 20px 8px 26px 6px black;
+}
+.projsub {
+  background-color: cyan;
+  transform: skewY(-3deg);
+  box-shadow: 20px 8px 26px 6px black;
+}
+#straight5 {
+  transform: skewY(3deg);
+}
+#straight5 li {
+  font-size: 16px;
+  color: #364f6b;
+  font-weight: 500;
+}
+
+/**Impact CREATED**/
+.impc {
+  background-image: url("/images/ipc.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 20px 8px 26px 6px black;
+}
+
+/**annual report**/
+.annual {
+  background-color: #364f6b;
+}
