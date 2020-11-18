@@ -1,0 +1,409 @@
+nav {
+  background: #364f6b;
+}
+nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+nav .logo {
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+  background: #364f6b;
+  margin: 0 5px;
+}
+nav ul li:hover {
+  transform: scale(1.1);
+}
+nav ul li a {
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover {
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+  text-decoration: none;
+}
+nav ul ul li a:hover {
+  box-shadow: none;
+  text-decoration: none;
+}
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul ul ul {
+  border-top: none;
+}
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 200px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul ul li a {
+  line-height: 50px;
+}
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,
+.icon,
+input {
+  display: none;
+}
+.fa-plus {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+form {
+  background-color: #3fc1c9;
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: right;
+  margin-right: 1.5rem;
+  margin-top: 0.9rem;
+}
+
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  color: white;
+}
+button:hover {
+  color: #fc5185;
+}
+
+@media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: cyan;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul {
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  nav ul ul ul a {
+    padding-left: 80px;
+  }
+  nav ul ul ul li {
+    position: static;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+  nav ul ul li {
+    border-bottom: 0px;
+  }
+  span.cancel:before {
+    content: "\f00d";
+  }
+}
+.content1 {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header {
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+form {
+  margin-left: 1rem;
+}
+
+/*NAVBAR CSS END*/
+.mainvol {
+  background-color: #3fc1c9;
+  background-image: url("vol2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  margin: 35px auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+  background-color: #364f6b;
+  padding: 30px;
+  float: left;
+  margin-left: 5rem;
+  padding-top: 1rem;
+}
+
+.wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form {
+  width: 100%;
+}
+
+.wrapper .form .inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label {
+  width: 200px;
+  color: white;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus {
+  border: 1px solid cyan;
+}
+
+.wrapper .form .inputfield p {
+  font-size: 14px;
+  color: #757575;
+}
+.wrapper .form .inputfield .check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid cyan;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark {
+  background: cyan;
+}
+
+.wrapper
+  .form
+  .inputfield
+  .check
+  input[type="checkbox"]:checked
+  ~ .checkmark:before {
+  display: block;
+}
+
+.wrapper .form .inputfield .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: cyan;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover {
+  background: #364f6b;
+}
+
+.wrapper .form .inputfield:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+  .wrapper .form .inputfield {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label {
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms {
+    flex-direction: row;
+  }
+}
+
+.footer {
+  background-color: #364f6b;
+}
+
+#overhover:hover {
+  background-color: #fc5185;
+  transition-duration: 2s;
+  border-radius: 45px;
+}
