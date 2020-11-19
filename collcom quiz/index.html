@@ -15,6 +15,550 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  nav {
+    background: #364f6b;
+  }
+
+  nav:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+  }
+
+  nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+  }
+
+  nav ul li {
+    display: inline-block;
+    background: #364f6b;
+    margin: 0 5px;
+  }
+
+  nav ul li:hover {
+    transform: scale(1.1);
+  }
+
+  nav ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
+  nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+  }
+
+  nav ul ul li a:hover {
+    box-shadow: none;
+  }
+
+  nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+  }
+
+  nav ul ul ul {
+    border-top: none;
+  }
+
+  nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul ul li a {
+    line-height: 50px;
+  }
+
+  nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+  }
+
+  .show,
+  .icon,
+  input {
+    display: none;
+  }
+
+  .fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+  }
+
+  form {
+    background-color: #3fc1c9;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+    margin-right: 1.5rem;
+    margin-top: 0.9rem;
+  }
+
+  input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  ::placeholder {
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    color: white;
+  }
+
+  button:hover {
+    color: #fc5185;
+  }
+
+  @media all and (max-width: 968px) {
+    nav ul {
+      margin-right: 0px;
+      float: left;
+    }
+
+    nav .logo {
+      padding-left: 30px;
+      width: 100%;
+    }
+
+    .show+a,
+    ul {
+      display: none;
+    }
+
+    nav ul li,
+    nav ul ul li {
+      display: block;
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      box-shadow: none;
+    }
+
+    .show {
+      display: block;
+      color: white;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+
+    .show:hover {
+      color: cyan;
+    }
+
+    .icon {
+      display: block;
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 40px;
+      line-height: 70px;
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    nav ul ul {
+      top: 70px;
+      border-top: 0px;
+      float: none;
+      position: static;
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    nav ul ul a {
+      padding-left: 40px;
+    }
+
+    nav ul ul ul a {
+      padding-left: 80px;
+    }
+
+    nav ul ul ul li {
+      position: static;
+    }
+
+    [id^="btn"]:checked+ul {
+      display: block;
+    }
+
+    nav ul ul li {
+      border-bottom: 0px;
+    }
+
+    span.cancel:before {
+      content: "\f00d";
+    }
+  }
+
+  .content {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  header {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px 0;
+  }
+
+  p {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  form {
+    margin-left: 1rem;
+  }
+
+  /*this is for the awareness container*/
+
+
+  .aw_h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+    text-align: center;
+    color: #211952;
+    text-decoration: underline;
+  }
+
+  .opensettings_btn {
+    background-color: #5e81f4 !important;
+    color: #fff;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 300px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 40px
+  }
+
+  .awareness_container {
+    background-color: #fc5185;
+  }
+
+  .vertical-menu {
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 5px solid rgb(31, 17, 71);
+    margin-left: 50px;
+    text-align: center;
+    background-color: cyan;
+  }
+
+  .vertical-menu a {
+    background-color: white;
+    color: black;
+    display: block;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color: cyan;
+  }
+
+  .vertical-menu a:hover {
+    background-color:rgb(173, 253, 240);
+  }
+
+  .vertical-menu a.active {
+    background-color: cyan;
+    color: black;
+    height: 60px;
+  }
+
+  .vertical-menu input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    border: none;
+    font-size: 17px;
+    width: 180px;
+    height: 40px;
+
+  }
+
+  /*this is for the slideshow in the right*/
+  /*--------------------------------------------------------*/
+
+
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  /*this is for the text_container*/
+
+  .text_container {
+    margin-top: 30px;
+  }
+
+  .text_container img {
+    margin-right: 20px;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  /*this code is for the second container*/
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 3px;
+  }
+
+  .row {
+    margin: 0 -5px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+  }
+
+  .fa {
+    font-size: 30px;
+  }
+
+  /*this is the code for the third container*/
+  .th_btn {
+    background-color: #5e81f4 !important;
+    color: #fff;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 300px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+  }
+
+  .third_container {
+    margin-top: 50px;
+  }
+
+  .p_btn {
+    background-color: #5e81f4 !important;
+    color: #fff;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 300px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+  }
+
+  /* -------------------------------------------------------- */
+  /* -------------------------------------------------------- */
+
+
+  img {
+    float: left;
+  }
+
+
+
+
+
+  /* -------------------------------------------------------- */
+  /* -------------------------------------------------------- */
+</style>
+
 <body>
   <!--Navbar Start-->
   <nav>
@@ -111,164 +655,173 @@
   <!--this is for the quiz content-->
 
   <div class="awareness_container">
-   <div class="row">
-     <div class="col-6">
-       <h1 class="aw_h1">Awareness Training On cyber<br> Crime Awareness</h1>
-       <button  class="counter_btn" type="button"></button>
-       <div class="aw_btn">
-        <button class="btn opensettings_btn">Total Number of People Trained</button>
-       </div>
-       
-       <div class="vertical-menu">
-        <a href="#" class="active"><h2>List of Top Performers in Enrolling in the
-          Training Program</h2></a><br>
-        <hr class="solid">
-        <a href="#">favico</a>
-        <a href="#">darlian</a>
-        <a href="#">ulipins</a>
-        <a href="#">yolverity</a>
-        <a href="#">favico</a>
-        <a href="#">darlian</a>
-        <a href="#">ulipins</a>
-        <a href="#">yolverity</a>
-        <a href="#">favico</a>
-        <a href="#">darlian</a>
-        <a href="#">ulipins</a>
-        <a href="#">yolverity</a>
-       </div>
-     </div>
-       <div class="col-6">
-      
-       <div class="slideshow-container">
+    <div class="row">
+      <div class="col-6">
+        <h1 class="aw_h1">AWARENESS TRAINING ON CYBER<br> CRIMEE AWARENESS</h1>
+        <button class="counter_btn" type="button"></button>
+        <div class="aw_btn">
+          <button class="btn opensettings_btn">Total Number of People Trained</button>
+        </div>
 
- 
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 6</div>
-          <img src="./images/sc-1.jpg" style="width:100%">
+        <div class="vertical-menu">
+          <a href="#" class="active">
+            <h2>List of Top Performers in Enrolling in the
+              Training Program</h2>
+          </a><br>
+          <hr class="solid">
+          <a href="#">favico</a>
+          <a href="#">darlian</a>
+          <a href="#">ulipins</a>
+          <a href="#">yolverity</a>
+          <a href="#">favico</a>
+          <a href="#">darlian</a>
+          <a href="#">ulipins</a>
+          <a href="#">yolverity</a>
+          <a href="#">favico</a>
+          <a href="#">darlian</a>
+          <a href="#">ulipins</a>
+          <a href="#">yolverity</a>
         </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 6</div>
-          <img src="./images/sc-2.jpg" style="width:100%">
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 6</div>
-          <img src="./images/sc-3.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-          <div class="numbertext">4 / 6</div>
-          <img src="./images/sc-4.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-          <div class="numbertext">5 / 6</div>
-          <img src="./images/sc-3.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-          <div class="numbertext">6 / 6</div>
-          <img src="./images/sc-2.jpg" style="width:100%">
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
+      </div>
+      <div class="col-6">
+
+        <div class="slideshow-container">
+
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="./images/sc-1.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="./images/sc-2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="./images/sc-3.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="./images/sc-4.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="./images/sc-3.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="./images/sc-2.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
         </div>
         <br>
-        
+
         <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-          <span class="dot" onclick="currentSlide(4)"></span> 
-          <span class="dot" onclick="currentSlide(5)"></span> 
-          <span class="dot" onclick="currentSlide(6)"></span> 
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
         </div>
 
-<div class="text_container">
-<img src="./images/test-2.jpg" style="width: 40%;">
-<p style="font-size: 20px">ipsum dolor sit amet consectetur adipisicing elit. Suscipit deleniti optio labore asperiores quasi at dignissimos atque qui quidem eum soluta molestiae necessitatibus, dolorum minus sapiente iure voluptates reprehenderit totam?</p>
-</div>
+        <div class="text_container">
+          <img src="./images/test-2.jpg" style="width: 40%;">
+          <p style="font-size: 20px">ipsum dolor sit amet consectetur adipisicing elit. Suscipit deleniti optio labore
+            asperiores quasi at dignissimos atque qui quidem eum soluta molestiae necessitatibus, dolorum minus sapiente
+            iure voluptates reprehenderit totam?</p>
+        </div>
 
-     </div>
-  </div>
-</div>
-
-<!--this is for the second container-->
- <div class="sec_container">
-   <h1>
-    <br>
-    Training Quiz In English</h1>
-  <br>
-  <p style="font-size:20px;"><img src="images\sc-4.jpg" alt="Pineapple" style="width:600px;height:600px;margin-right:15px;">
-    The Cyber Trivia: This is 30 minutes innovative designed quiz, not to only make people attempt a quiz but at the
-    same time, but also make them LEARN and ENRICH their knowledge about popular cybercrime issues and preventive
-    measures. There is no limit on timing to complete the quiz, take your own time, read the instrucions carefully,
-    watch the video till the end and then aswerers the questions.
-    <br></br>
-
-    <b>Timing:- </b> 30 min <br></br>
-    <b>Rewards:- </b><br>
-    <br> 1.<br> 2. <br> 3. <br> 4.
-
-      <h2><b>Total Number Of People Trained</b></h2>
-      <br>
-
-      <div class="row">
-        <div class="column">
-          <button class="p_btn">total number of people Trained</button>
-          <br>
-          </div>
+      </div>
     </div>
-  </p>
-</div>
- <!--this is for the third container-->
+  </div>
 
-<div class="third_container">
-<div class="row">
-  <div class="col-6">
-<h1>Training quiz in hindi</h1><br></br>
-<div class="img">
-<img src="./images/sc-2.jpg"><br></br>
-</div>
-<button class="th_btn">Participate</button>
-</div>
-<div class="col-6">
-  <p style="font-size: 20px;"> The Cyber Trivia: This is 30 minutes innovative designed quiz, not to only make people attempt a quiz but at the
-    same time, but also make them LEARN and ENRICH their knowledge about popular cybercrime issues and preventive
-    measures. There is no limit on timing to complete the quiz, take your own time, read the instrucions carefully,
-    watch the video till the end and then aswerers the questions.</p><br>
-    <b>Timing:- </b> 30 min <br></br>
+  <!--this is for the second container-->
+  <div class="sec_container">
+    <h1>
+      <br>
+      Training Quiz In English</h1>
+    <br>
+    <p style="font-size:20px;"><img src="images\sc-4.jpg" alt="Pineapple"
+        style="width:600px;height:600px;margin-right:15px;">
+      The Cyber Trivia: This is 30 minutes innovative designed quiz, not to only make people attempt a quiz but at the
+      same time, but also make them LEARN and ENRICH their knowledge about popular cybercrime issues and preventive
+      measures. There is no limit on timing to complete the quiz, take your own time, read the instrucions carefully,
+      watch the video till the end and then aswerers the questions.
+      <br></br>
 
-    <b>Rewards:- </b><br>
-    <br> 1.<br> 2. <br> 3. <br> 4.<br>
-    <button class="p_btn">total number of people Trained</button>
-    <div class="vertical-menu">
-      <a href="#" class="active"><h2>List of Top scorers in the
-        Training Program</h2></a><br>
-      <hr class="solid">
-      <a href="#">favico</a>
-      <a href="#">darlian</a>
-      <a href="#">ulipins</a>
-      <a href="#">yolverity</a>
-      <a href="#">favico</a>
-      <a href="#">darlian</a>
-      <a href="#">ulipins</a>
-      <a href="#">yolverity</a>
-      <a href="#">favico</a>
-      <a href="#">darlian</a>
-      <a href="#">ulipins</a>
-      <a href="#">yolverity</a>
-     </div>
-    
-</div>
-</div>
-</div>
+      <b>Timing:- </b> 30 min <br></br>
+      <b>Rewards:- </b><br>
+      <br> 1.<br> 2. <br> 3. <br> 4.
+
+    <h2><b>Total Number Of People Trained</b></h2>
+    <br>
+
+    <div class="row">
+      <div class="column">
+        <button class="p_btn">total number of people Trained</button>
+        <br>
+      </div>
+    </div>
+    </p>
+  </div>
+  <!--this is for the third container-->
+
+  <div class="third_container">
+    <div class="row">
+      <div class="col-6">
+        <h1>Training quiz in hindi</h1><br></br>
+        <div class="img">
+          <img src="./images/sc-2.jpg"><br></br>
+        </div>
+        <button class="th_btn">Participate</button>
+      </div>
+      <div class="col-6">
+        <p style="font-size: 20px;"> The Cyber Trivia: This is 30 minutes innovative designed quiz, not to only make
+          people attempt a quiz but at the
+          same time, but also make them LEARN and ENRICH their knowledge about popular cybercrime issues and preventive
+          measures. There is no limit on timing to complete the quiz, take your own time, read the instrucions
+          carefully,
+          watch the video till the end and then aswerers the questions.</p><br>
+        <b>Timing:- </b> 30 min <br></br>
+
+        <b>Rewards:- </b><br>
+        <br> 1.<br> 2. <br> 3. <br> 4.<br>
+        <button class="p_btn">total number of people Trained</button>
+        <div class="vertical-menu">
+          <a href="#" class="active">
+            <h2>List of Top scorers in the
+              Training Program</h2>
+          </a><br>
+          <hr class="solid">
+          <a href="#">favico</a>
+          <a href="#">darlian</a>
+          <a href="#">ulipins</a>
+          <a href="#">yolverity</a>
+          <a href="#">favico</a>
+          <a href="#">darlian</a>
+          <a href="#">ulipins</a>
+          <a href="#">yolverity</a>
+          <a href="#">favico</a>
+          <a href="#">darlian</a>
+          <a href="#">ulipins</a>
+          <a href="#">yolverity</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 
 
 
 
- <!-- -------------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------------- -->
   <!-- -------------------------------------------------------------------------------- -->
   <script>
 
@@ -299,4 +852,4 @@
       dots[slideIndex - 1].className += " active";
     }
   </script>
-  </body>
+</body>
